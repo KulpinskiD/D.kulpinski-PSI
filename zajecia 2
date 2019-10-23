@@ -1,0 +1,45 @@
+#cw 1
+def zad1(tablica1,tablica2):
+    tablica3=[]
+    for i in range(5):
+        if i % 2 == 0:
+            tablica3.append(tablica1[i])
+        else:
+            tablica3.append(tablica2[i])
+    print(tablica3)
+tablica1=[1,2,3,4,5]
+tablica2=[6,7,8,9,10]
+zad1(tablica1,tablica2)
+#cw 2
+def zad2(data_text):
+    print("dlugosc tekstu wynosi "+ str(len(data_text)) +" znakow")
+    print("lista znakow w napisie")
+    for i in data_text:
+        print (i)
+    print ("juz wszystkie znaki")
+    print("zamana na same duze litery "+data_text.upper())
+    print("zamana na same male litery " + data_text.lower())
+zad2("Dog")
+#cw 3
+def zad3(text, litery):
+    for x in litery:
+        for i in range(len(text)):
+            if(text[i] == x):
+                text.replace(text[i] ,"")
+    print(text.replace(text[i] ,""))
+
+zad3("ala ma kota",'a')
+def zad4(temperatura,na_co):
+    if(na_co=='f'):
+        return temperatura*1
+    elif(na_co =='r'):
+        return temperatura*2
+    elif(na_co == 'k'):
+        return temperatura*3
+    else:
+        print("podales niewlasciwy symbol nie moge tego obliczyc")
+temperatura=zad4(20, 'r')
+print("temperatura po przeliczenu wynosi "+str(temperatura))
+#cw 5
+class kalkulator:
+
