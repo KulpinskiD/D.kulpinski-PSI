@@ -1,0 +1,57 @@
+import file_manager
+#cw 5
+class kalkulator():
+    x=2
+    y=4
+    def dodaj(self):
+        wynik=self.x+self.y
+        print ("wynik operaci dodaj wynosi "+str(wynik))
+    def odejmij(self):
+        wynik = self.x - self.y
+        print ("wynik operaci odejmij wynosi "+str(wynik))
+    def mnorzenie(self):
+        wynik = self.x * self.y
+        print ("wynik operaci mnorzenia wynosi " + str(wynik))
+    def dzielenie(self):
+        if self.y!=0:
+            wynik = self.x / self.y
+            print ("wynik operaci dzielenia wynosi " + str(wynik))
+        else:
+            print("y musi byc ruzne od 0")
+pierwsze=kalkulator()
+drogi=kalkulator()
+drogi.x=2
+drogi.y=3
+pierwsze.x=2
+pierwsze.y=0
+pierwsze.dodaj()
+pierwsze.odejmij()
+pierwsze.mnorzenie()
+pierwsze.dzielenie()
+drogi.dzielenie()
+#cw 6
+class ScienceCalculator(kalkulator):
+    def potengowanie(self):
+        if self.y>1:
+            tymczasowa=self.x
+            wynik=self.x*self.x
+        else:
+            wynik=self.x
+        for i in range(self.y-2):
+            wynik=wynik*tymczasowa
+        print ("wynik potengowania= "+ str(wynik))
+trzy=ScienceCalculator()
+trzy.potengowanie()
+#cw7
+tekst="kot"
+print (tekst[::-1])
+#cw8i 9
+a=file_manager.FileManager()
+a.dodaj="ala"
+a.update_file()
+a.read_file()
+a.update_file()
+a.read_file()
+a.update_file()
+a.read_file()
+#cw 10
