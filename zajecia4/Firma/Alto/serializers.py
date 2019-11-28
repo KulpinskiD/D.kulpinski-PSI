@@ -7,23 +7,24 @@ from .models import Grupy
 from .models import Personel
 from .models import Stanowisko
 from .models import Obecnosc
-class Klient(serializers.ModelSerializer):
+
+class KlientS(serializers.ModelSerializer):
     class Meta:
         model = Klient
         fields = ['Id_klienta', 'Imie', 'Nazwisko', 'Telefon','Kod_pocztowy', 'Adres', 'Miasto', 'Nip']
-class Dane_firmy(serializers.ModelSerializer):
+class Dane_firmyS(serializers.ModelSerializer):
     class Meta:
         model = Dane_firmy
         fields = ['Dane_firmy', 'Nazwa_firmy', 'Kod_pocztowy', 'Adres', 'Miasto', 'Id_klienta']
-class Plan_zajec(serializers.ModelSerializer):
+class Plan_zajecS(serializers.ModelSerializer):
     class Meta:
         model = Plan_zajec
         fields = ['Id_zajecia', 'Co_zrobic', 'Czy_zrobione']
-class Zlecenia(serializers.ModelSerializer):
+class ZleceniaS(serializers.ModelSerializer):
     class Meta:
         model = Zlecenia
         fields = ['Id_zlecenia', 'Zlecenie', 'Zaplacone', 'Id_klienta', 'Id_zajecia']
-class Grupy(serializers.ModelSerializer):
+class GrupyS(serializers.ModelSerializer):
     class Meta:
         model = Grupy
         fields = ['Id_grupy', 'Id_zajecia']
